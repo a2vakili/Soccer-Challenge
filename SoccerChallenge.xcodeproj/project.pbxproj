@@ -29,13 +29,10 @@
 		B6A020601B66A6B70055AD01 /* WindNode.m in Sources */ = {isa = PBXBuildFile; fileRef = B6A0205F1B66A6B70055AD01 /* WindNode.m */; };
 		B6A020621B66ABF40055AD01 /* images.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B6A020611B66ABF40055AD01 /* images.jpg */; };
 		B6A020651B66B42F0055AD01 /* Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = B6A020641B66B42F0055AD01 /* Utilities.m */; };
-		B6A0206D1B66BD3F0055AD01 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6A020671B66BD3F0055AD01 /* Bolts.framework */; };
-		B6A0206E1B66BD3F0055AD01 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6A020681B66BD3F0055AD01 /* Parse.framework */; };
-		B6A0206F1B66BD3F0055AD01 /* ParseCrashReporting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6A020691B66BD3F0055AD01 /* ParseCrashReporting.framework */; };
-		B6A020701B66BD3F0055AD01 /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6A0206A1B66BD3F0055AD01 /* ParseFacebookUtils.framework */; };
-		B6A020711B66BD3F0055AD01 /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6A0206B1B66BD3F0055AD01 /* ParseFacebookUtilsV4.framework */; };
-		B6A020721B66BD3F0055AD01 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6A0206C1B66BD3F0055AD01 /* ParseUI.framework */; };
 		B6A020741B66BED30055AD01 /* goal.png in Resources */ = {isa = PBXBuildFile; fileRef = B6A020731B66BED30055AD01 /* goal.png */; };
+		B6A020771B6810FA0055AD01 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6A020761B6810FA0055AD01 /* GameKit.framework */; };
+		B6A0207A1B68165A0055AD01 /* UserTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6A020791B68165A0055AD01 /* UserTableViewController.m */; };
+		B6A0207D1B681B530055AD01 /* GameKitHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = B6A0207C1B681B530055AD01 /* GameKitHelper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,14 +80,13 @@
 		B6A020611B66ABF40055AD01 /* images.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = images.jpg; sourceTree = "<group>"; };
 		B6A020631B66B42F0055AD01 /* Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utilities.h; sourceTree = "<group>"; };
 		B6A020641B66B42F0055AD01 /* Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utilities.m; sourceTree = "<group>"; };
-		B6A020671B66BD3F0055AD01 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
-		B6A020681B66BD3F0055AD01 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
-		B6A020691B66BD3F0055AD01 /* ParseCrashReporting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseCrashReporting.framework; sourceTree = "<group>"; };
-		B6A0206A1B66BD3F0055AD01 /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
-		B6A0206B1B66BD3F0055AD01 /* ParseFacebookUtilsV4.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtilsV4.framework; sourceTree = "<group>"; };
-		B6A0206C1B66BD3F0055AD01 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
 		B6A020731B66BED30055AD01 /* goal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = goal.png; sourceTree = "<group>"; };
 		B6A020751B66DFD30055AD01 /* SoccerTypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SoccerTypes.h; sourceTree = "<group>"; };
+		B6A020761B6810FA0055AD01 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
+		B6A020781B68165A0055AD01 /* UserTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserTableViewController.h; sourceTree = "<group>"; };
+		B6A020791B68165A0055AD01 /* UserTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserTableViewController.m; sourceTree = "<group>"; };
+		B6A0207B1B681B530055AD01 /* GameKitHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameKitHelper.h; sourceTree = "<group>"; };
+		B6A0207C1B681B530055AD01 /* GameKitHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameKitHelper.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,12 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B6A020721B66BD3F0055AD01 /* ParseUI.framework in Frameworks */,
-				B6A0206E1B66BD3F0055AD01 /* Parse.framework in Frameworks */,
-				B6A0206F1B66BD3F0055AD01 /* ParseCrashReporting.framework in Frameworks */,
-				B6A020701B66BD3F0055AD01 /* ParseFacebookUtils.framework in Frameworks */,
-				B6A0206D1B66BD3F0055AD01 /* Bolts.framework in Frameworks */,
-				B6A020711B66BD3F0055AD01 /* ParseFacebookUtilsV4.framework in Frameworks */,
+				B6A020771B6810FA0055AD01 /* GameKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -120,6 +111,7 @@
 		B618E4CF1B64354D0020AC6C = {
 			isa = PBXGroup;
 			children = (
+				B6A020761B6810FA0055AD01 /* GameKit.framework */,
 				B618E4DA1B64354D0020AC6C /* SoccerChallenge */,
 				B618E4F91B64354D0020AC6C /* SoccerChallengeTests */,
 				B618E4D91B64354D0020AC6C /* Products */,
@@ -143,8 +135,12 @@
 				B618E4E01B64354D0020AC6C /* AppDelegate.m */,
 				B6A020631B66B42F0055AD01 /* Utilities.h */,
 				B6A020641B66B42F0055AD01 /* Utilities.m */,
+				B6A0207B1B681B530055AD01 /* GameKitHelper.h */,
+				B6A0207C1B681B530055AD01 /* GameKitHelper.m */,
 				B6A020231B667D190055AD01 /* GameTableViewController.h */,
 				B6A020241B667D190055AD01 /* GameTableViewController.m */,
+				B6A020781B68165A0055AD01 /* UserTableViewController.h */,
+				B6A020791B68165A0055AD01 /* UserTableViewController.m */,
 				B618E4E51B64354D0020AC6C /* GameScene.sks */,
 				B618E4EA1B64354D0020AC6C /* Main.storyboard */,
 				B618E4ED1B64354D0020AC6C /* Images.xcassets */,
@@ -159,7 +155,6 @@
 		B618E4DB1B64354D0020AC6C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				B6A020661B66BD3F0055AD01 /* parse-library-1.7.5 (2) */,
 				B618E4DC1B64354D0020AC6C /* Info.plist */,
 				B618E4DD1B64354D0020AC6C /* main.m */,
 			);
@@ -216,19 +211,6 @@
 			name = SpriteKit;
 			sourceTree = "<group>";
 		};
-		B6A020661B66BD3F0055AD01 /* parse-library-1.7.5 (2) */ = {
-			isa = PBXGroup;
-			children = (
-				B6A020671B66BD3F0055AD01 /* Bolts.framework */,
-				B6A020681B66BD3F0055AD01 /* Parse.framework */,
-				B6A020691B66BD3F0055AD01 /* ParseCrashReporting.framework */,
-				B6A0206A1B66BD3F0055AD01 /* ParseFacebookUtils.framework */,
-				B6A0206B1B66BD3F0055AD01 /* ParseFacebookUtilsV4.framework */,
-				B6A0206C1B66BD3F0055AD01 /* ParseUI.framework */,
-			);
-			path = "parse-library-1.7.5 (2)";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -278,6 +260,12 @@
 				TargetAttributes = {
 					B618E4D71B64354D0020AC6C = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = 485M4RZPYP;
+						SystemCapabilities = {
+							com.apple.GameCenter = {
+								enabled = 1;
+							};
+						};
 					};
 					B618E4F51B64354D0020AC6C = {
 						CreatedOnToolsVersion = 6.4;
@@ -345,6 +333,8 @@
 				B6A020251B667D190055AD01 /* GameTableViewController.m in Sources */,
 				B6A020651B66B42F0055AD01 /* Utilities.m in Sources */,
 				B6A020421B6689CB0055AD01 /* GroundNode.m in Sources */,
+				B6A0207A1B68165A0055AD01 /* UserTableViewController.m in Sources */,
+				B6A0207D1B681B530055AD01 /* GameKitHelper.m in Sources */,
 				B6A020581B669E780055AD01 /* PusheenNode.m in Sources */,
 				B6A020451B669AC20055AD01 /* GamePlayScene.m in Sources */,
 				B618E4DE1B64354D0020AC6C /* main.m in Sources */,
@@ -473,6 +463,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/SoccerChallenge/parse-library-1.7.5",
@@ -481,6 +473,7 @@
 				INFOPLIST_FILE = SoccerChallenge/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -488,6 +481,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/SoccerChallenge/parse-library-1.7.5",
@@ -496,6 +491,7 @@
 				INFOPLIST_FILE = SoccerChallenge/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

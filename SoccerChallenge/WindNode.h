@@ -7,8 +7,14 @@
 //
 
 #import <SpriteKit/SpriteKit.h>
+#import "SoccerTypes.h"
 
 
 @interface WindNode : SKSpriteNode
+
+@property(nonatomic,strong) UIImage *windImage;
+
+-(void)setWindType: (WindType)type;
++(instancetype)windNode:(CGSize)size;
 
 @end

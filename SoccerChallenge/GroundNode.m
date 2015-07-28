@@ -10,23 +10,32 @@
 
 @implementation GroundNode
 
-+(instancetype)surfaceOfType:(surfaceType)type withSize: (CGSize)size{
++(instancetype)surfaceOfSize: (CGSize)size{
     GroundNode *ground;
     
-    if (type == grassSurface) {
-        ground = [self spriteNodeWithColor:[UIColor greenColor] size:size];
-    }
-    else if (type == iceSurface){
-        ground = [self spriteNodeWithColor:[UIColor whiteColor] size: size];
-    }
-    
-    else
-        ground = [self spriteNodeWithColor:[UIColor brownColor] size:size];
-    
+    ground = [self spriteNodeWithColor:[UIColor whiteColor] size:size];
     ground.name = @"ground";
     ground.position = CGPointMake(size.width, size.height);
     
     return ground;
+}
+
+-(void)setSurfaceType: (SurfaceType)type{
+    switch (type) {
+        case SurfaceTypeGrassSurface:
+            self.color = [ UIColor greenColor];
+            break;
+        case SurfaceTypeIceSurface:
+            self.color = [UIColor whiteColor];
+            break;
+        case SurfaceTypeWoodSurface:
+            self.color = [UIColor brownColor];
+            break;
+            
+        default:
+            self.color = [UIColor blackColor];
+            break;
+    }
 }
 
 @end

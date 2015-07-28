@@ -9,11 +9,17 @@
 #import "GamePlayScene.h"
 #import "PusheenNode.h"
 #import "GroundNode.h"
-#import "SoccerTypes.h"
+#import "BallNode.h"
+#import "WindNode.h"
+
 
 @interface GamePlayScene ()
 @property(nonatomic,strong) SKSpriteNode *player;
 @property(nonatomic,strong) GroundNode *ground;
+@property(nonatomic) CGSize sizeOfGround;
+@property(nonatomic,strong) BallNode *ball;
+@property(nonatomic,strong) WindNode *wind;
+
 
 @end
 
@@ -25,24 +31,36 @@
     self = [super initWithSize:size];
     if (self) {
         
-        SKSpriteNode *goalNode = [SKSpriteNode spriteNodeWithImageNamed:@"goal"];
+        SKSpriteNode *goalNode = [SKSpriteNode spriteNodeWithImageNamed:@"goalImage"];
         
-        CGPoint goalPosition = CGPointMake(self.size.width-50, 50);
+        CGPoint goalPosition = CGPointMake(18, 50);
         
         goalNode.position = goalPosition;
-        goalNode.size = CGSizeMake(50, 50);
+        goalNode.size = CGSizeMake(30, 50);
         [self addChild:goalNode];
         
         self.player = [SKSpriteNode spriteNodeWithImageNamed:@"pusheen"];
-        self.player.position = CGPointMake(0, 50);
+        self.player.position = CGPointMake(50, 50);
         self.player.size = CGSizeMake(30, 30);
         
         [self addChild:self.player];
         
-        self.ground = [GroundNode surfaceOfType:grassSurface withSize:CGSizeMake(self.frame.size.width + 150, 50)];
+        self.sizeOfGround = CGSizeMake( 600, 50);
+        
+        self.ground = [GroundNode surfaceOfSize:self.sizeOfGround];
         self.ground.position = CGPointMake(10, 50);
         
         [self addChild:self.ground];
+        
+        self.ball = [BallNode ballOfType:CGSizeMake(280, 50)];
+        self.ball.size = CGSizeMake(20, 20);
+        
+        [self addChild:self.ball];
+        
+        self.wind = [WindNode windNode:CGSizeMake(140, 140)];
+        self.wind.size = CGSizeMake(140, 40);
+        
+        [self addChild:self.wind];
         
        
     }
@@ -52,29 +70,22 @@
 
 -(void)setDistance:(NSInteger)distance {
     
-    NSInteger scale = (distance / self.frame.size.width) * self.frame.size.width * 2.32;
-    self.player.position = CGPointMake(scale, 50);
+    NSInteger scale = (distance * 2.32);
+    self.player.position = CGPointMake(50 + scale, 50);
     self.player.size = CGSizeMake(30, 30);
     
 }
 
 -(void)setGroundType:(SurfaceType)surface {
-    if (surface ==  ) {
-        // replace current ground with a grass ground
-    
-    } else {
-        // replace current ground with ???
-    }
-    
-    
-    
-
+    [self.ground setSurfaceType:surface];
 }
 
-//-(void)setGround:(GroundNode *)ground{
-//    self.ground.position = CGPointMake(10, 50);
-//}
+-(void)setBallType:(BallType)ball{
+    [self.ball setBallType:ball];
+}
 
-
+-(void)setWindType:(WindType)wind{
+    [self.wind setWindType:wind];
+}
 
 @end

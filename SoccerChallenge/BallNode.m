@@ -8,26 +8,44 @@
 
 #import "BallNode.h"
 
+
+
 @implementation BallNode
 
-+(instancetype) ballOfType: (ballType)type{
++(instancetype) ballOfType: (CGSize)size{
     BallNode *ball;
-    
-    if (type == pingpongBall) {
-        ball = [self spriteNodeWithImageNamed:@"pingpongball"];
-    }
-    else if (type == soccerBall){
-        ball = [self spriteNodeWithImageNamed:@"soccer_ball"];
-    }
-    else if (type == basketBall){
-        ball = [self spriteNodeWithImageNamed:@"basketball"];
-    }
-    else
-        ball = [self spriteNodeWithImageNamed:@"bowlingball"];
-    
+    ball = [self spriteNodeWithImageNamed:@"basketball"];
+    ball.position = CGPointMake(size.width, size.height);
     return ball;
     
 }
+
+
+-(void)setBallType:(BallType)type{
+  
+    switch (type) {
+        case BallTypeBowlingBall:
+            self.image = [UIImage imageNamed:@"bowlingball"];
+            break;
+        case BallTypePingPongBall:
+            self.image = [UIImage imageNamed:@"pingpong"];
+            break;
+        case BallTypeSoccerBall:
+            self.image = [UIImage imageNamed:@"soccer_ball"];
+            break;
+        default:
+            self.image= [UIImage imageNamed:@"basketball"];
+            break;
+    }
+    
+    
+    SKTexture *texture = [SKTexture textureWithImage:self.image];
+    self.texture = texture;
+}
+
+
+    
+
 
 
 @end

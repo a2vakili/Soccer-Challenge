@@ -7,20 +7,17 @@
 //
 
 #import <SpriteKit/SpriteKit.h>
+#import "SoccerTypes.h"
 
-typedef NS_ENUM(NSUInteger, ballType){
-    pingpongBall = 0,
-    soccerBall = 1,
-    basketBall = 2,
-    bowlingBall = 3
-};
+
 
 @interface BallNode : SKSpriteNode
 
 
+@property(nonatomic,strong) UIImage *image;
+@property(nonatomic) BallType type;
 
-@property(nonatomic) ballType type;
-
-+(instancetype) ballOfType: (ballType)type;
++(instancetype) ballOfType: (CGSize)size;
+-(void)setBallType:(BallType)type;
 
 @end

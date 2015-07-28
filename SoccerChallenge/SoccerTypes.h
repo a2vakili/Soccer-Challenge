@@ -14,8 +14,24 @@
 typedef NS_ENUM(NSUInteger, SurfaceType){
     SurfaceTypeWoodSurface = 0,
     SurfaceTypeGrassSurface = 1,
-    SurfaceTypeIceSurface = 2
+    SurfaceTypeIceSurface = 2,
+    
 };
+
+typedef NS_ENUM(NSUInteger, BallType){
+    BallTypePingPongBall = 0,
+    BallTypeSoccerBall = 1,
+    BallTypeBasketBall = 2,
+    BallTypeBowlingBall = 3
+};
+
+typedef NS_ENUM(NSUInteger, WindType){
+    WindTypeStrongWind = 0,
+    WindTypeMediumWind = 1,
+    WindTypeLightWind = 2
+};
+
+
 
 
 #endif

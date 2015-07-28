@@ -14,7 +14,9 @@
 
 @property(nonatomic) SurfaceType type;
 
-+(instancetype)surfaceOfType:(SurfaceType)type withSize: (CGSize)size;
++(instancetype)surfaceOfSize: (CGSize)size;
+
+-(void)setSurfaceType: (SurfaceType)type;
 
 
 

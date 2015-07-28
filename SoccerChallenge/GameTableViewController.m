@@ -15,6 +15,9 @@
 
 @property (weak, nonatomic) IBOutlet UISlider *distanceSlider;
 @property(nonatomic,strong) GamePlayScene *scene;
+@property (weak, nonatomic) IBOutlet UILabel *timeDisplaylabel;
+@property (weak, nonatomic) IBOutlet UISlider *timeSlider;
+@property (weak, nonatomic) IBOutlet UILabel *distanceLabel;
 
 @end
 
@@ -34,7 +37,9 @@
     self.scene= [GamePlayScene sceneWithSize:skView.bounds.size];
     self.scene.scaleMode = SKSceneScaleModeAspectFill;
     // Present the scene.
+    [self.scene setGroundType:SurfaceTypeIceSurface];
     [skView presentScene:self.scene];
+    
     
     
     
@@ -44,6 +49,9 @@
 - (IBAction)sliderAction:(id)sender {
     
     [self.scene setDistance:self.distanceSlider.value];
+    
+    double value = self.distanceSlider.value;
+    self.distanceLabel.text = [NSString stringWithFormat:@"%0.1f meters",value];
     
 }
 
@@ -63,28 +71,67 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 
     // Return the number of rows in the section.
-    return 5;
+    return 6;
 }
 
-//- (IBAction)surfaceSegmentedControl:(id)sender {
-//    
-//    UISegmentedControl *segmentedControl = (UISegmentedControl *) sender;
-//    NSInteger selectedSegment = segmentedControl.selectedSegmentIndex;
-//    
-////    if (selectedSegment == 0) {
-////        [self.scene se]
-////    }
-//    
-//}
-
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
+- (IBAction)surfaceSegmentedControl:(id)sender {
+    
+    UISegmentedControl *segmentedControl = (UISegmentedControl *) sender;
+    NSInteger selectedSegment = segmentedControl.selectedSegmentIndex;
+    
+   if (selectedSegment == 0) {
+       [self.scene setGroundType:SurfaceTypeIceSurface];
+    }
+   else if (selectedSegment == 1){
+       [self.scene setGroundType:SurfaceTypeGrassSurface];
+   }
+   else {
+        [self.scene setGroundType:SurfaceTypeWoodSurface];
+   }
 }
-*/
+
+- (IBAction)ballSegmentedControl:(id)sender {
+    UISegmentedControl *segmentedControl = (UISegmentedControl *) sender;
+    NSInteger selectedSegment = segmentedControl.selectedSegmentIndex;
+    if (selectedSegment == 0) {
+        [self.scene setBallType:BallTypeBasketBall];
+    }
+    else if(selectedSegment == 1){
+        [self.scene setBallType:BallTypePingPongBall];
+    }
+    else if(selectedSegment == 2){
+        [self.scene setBallType:BallTypeSoccerBall];
+    }
+    else {
+        [self.scene setBallType:BallTypeBowlingBall];
+    }
+}
+
+- (IBAction)timeSlider:(id)sender {
+    
+    double value = self.timeSlider.value;
+    
+    self.timeDisplaylabel.text = [NSString stringWithFormat:@"%0.1f seconds",value];
+}
+- (IBAction)windSegmentedControl:(id)sender {
+    
+    UISegmentedControl *segmentedControl = (UISegmentedControl *) sender;
+    NSInteger selectedSegment = segmentedControl.selectedSegmentIndex;
+    
+    if (selectedSegment == 0) {
+        [self.scene setWindType:WindTypeStrongWind];
+    }
+    else if(selectedSegment == 1){
+        [self.scene setWindType:WindTypeMediumWind];
+    }
+    else{
+        [self.scene setWindType:WindTypeLightWind];
+        
+    }
+   
+}
+
+
 
 /*
 // Override to support editing the table view.

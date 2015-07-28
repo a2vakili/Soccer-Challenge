@@ -7,6 +7,7 @@
 //
 
 #import <SpriteKit/SpriteKit.h>
+#import "SoccerTypes.h"
 
 @interface GamePlayScene : SKScene
 
@@ -16,8 +17,12 @@
 
 
 
+-(void)setGroundType:(SurfaceType)surface;
 
-//-(void)setGround:(GroundNode *)ground;
 -(void)setDistance:(NSInteger)distance;
+
+-(void)setBallType:(BallType)ball;
+
+-(void)setWindType:(WindType)wind;
 
 @end
