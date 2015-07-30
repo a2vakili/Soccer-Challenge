@@ -28,11 +28,10 @@
 		B6A0205D1B66A6180055AD01 /* wind.png in Resources */ = {isa = PBXBuildFile; fileRef = B6A0205C1B66A6180055AD01 /* wind.png */; };
 		B6A020601B66A6B70055AD01 /* WindNode.m in Sources */ = {isa = PBXBuildFile; fileRef = B6A0205F1B66A6B70055AD01 /* WindNode.m */; };
 		B6A020621B66ABF40055AD01 /* images.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B6A020611B66ABF40055AD01 /* images.jpg */; };
-		B6A020651B66B42F0055AD01 /* Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = B6A020641B66B42F0055AD01 /* Utilities.m */; };
 		B6A020741B66BED30055AD01 /* goal.png in Resources */ = {isa = PBXBuildFile; fileRef = B6A020731B66BED30055AD01 /* goal.png */; };
 		B6A020771B6810FA0055AD01 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6A020761B6810FA0055AD01 /* GameKit.framework */; };
-		B6A0207A1B68165A0055AD01 /* UserTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6A020791B68165A0055AD01 /* UserTableViewController.m */; };
-		B6A0207D1B681B530055AD01 /* GameKitHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = B6A0207C1B681B530055AD01 /* GameKitHelper.m */; };
+		B6A020801B698D7E0055AD01 /* ModelCalculations.m in Sources */ = {isa = PBXBuildFile; fileRef = B6A0207F1B698D7E0055AD01 /* ModelCalculations.m */; };
+		B6A020831B6A8E340055AD01 /* GCTurnBasedMatchHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = B6A020821B6A8E340055AD01 /* GCTurnBasedMatchHelper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,15 +77,13 @@
 		B6A0205E1B66A6B70055AD01 /* WindNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WindNode.h; sourceTree = "<group>"; };
 		B6A0205F1B66A6B70055AD01 /* WindNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WindNode.m; sourceTree = "<group>"; };
 		B6A020611B66ABF40055AD01 /* images.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = images.jpg; sourceTree = "<group>"; };
-		B6A020631B66B42F0055AD01 /* Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utilities.h; sourceTree = "<group>"; };
-		B6A020641B66B42F0055AD01 /* Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utilities.m; sourceTree = "<group>"; };
 		B6A020731B66BED30055AD01 /* goal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = goal.png; sourceTree = "<group>"; };
 		B6A020751B66DFD30055AD01 /* SoccerTypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SoccerTypes.h; sourceTree = "<group>"; };
 		B6A020761B6810FA0055AD01 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
-		B6A020781B68165A0055AD01 /* UserTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserTableViewController.h; sourceTree = "<group>"; };
-		B6A020791B68165A0055AD01 /* UserTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserTableViewController.m; sourceTree = "<group>"; };
-		B6A0207B1B681B530055AD01 /* GameKitHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameKitHelper.h; sourceTree = "<group>"; };
-		B6A0207C1B681B530055AD01 /* GameKitHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameKitHelper.m; sourceTree = "<group>"; };
+		B6A0207E1B698D7E0055AD01 /* ModelCalculations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModelCalculations.h; sourceTree = "<group>"; };
+		B6A0207F1B698D7E0055AD01 /* ModelCalculations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModelCalculations.m; sourceTree = "<group>"; };
+		B6A020811B6A8E340055AD01 /* GCTurnBasedMatchHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCTurnBasedMatchHelper.h; sourceTree = "<group>"; };
+		B6A020821B6A8E340055AD01 /* GCTurnBasedMatchHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCTurnBasedMatchHelper.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,14 +130,12 @@
 				B6A020551B669D280055AD01 /* SpriteKit */,
 				B618E4DF1B64354D0020AC6C /* AppDelegate.h */,
 				B618E4E01B64354D0020AC6C /* AppDelegate.m */,
-				B6A020631B66B42F0055AD01 /* Utilities.h */,
-				B6A020641B66B42F0055AD01 /* Utilities.m */,
-				B6A0207B1B681B530055AD01 /* GameKitHelper.h */,
-				B6A0207C1B681B530055AD01 /* GameKitHelper.m */,
+				B6A0207E1B698D7E0055AD01 /* ModelCalculations.h */,
+				B6A0207F1B698D7E0055AD01 /* ModelCalculations.m */,
+				B6A020811B6A8E340055AD01 /* GCTurnBasedMatchHelper.h */,
+				B6A020821B6A8E340055AD01 /* GCTurnBasedMatchHelper.m */,
 				B6A020231B667D190055AD01 /* GameTableViewController.h */,
 				B6A020241B667D190055AD01 /* GameTableViewController.m */,
-				B6A020781B68165A0055AD01 /* UserTableViewController.h */,
-				B6A020791B68165A0055AD01 /* UserTableViewController.m */,
 				B618E4E51B64354D0020AC6C /* GameScene.sks */,
 				B618E4EA1B64354D0020AC6C /* Main.storyboard */,
 				B618E4ED1B64354D0020AC6C /* Images.xcassets */,
@@ -327,14 +322,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6A020831B6A8E340055AD01 /* GCTurnBasedMatchHelper.m in Sources */,
 				B6A0205B1B66A0440055AD01 /* BallNode.m in Sources */,
 				B6A020601B66A6B70055AD01 /* WindNode.m in Sources */,
 				B618E4E11B64354D0020AC6C /* AppDelegate.m in Sources */,
 				B6A020251B667D190055AD01 /* GameTableViewController.m in Sources */,
-				B6A020651B66B42F0055AD01 /* Utilities.m in Sources */,
 				B6A020421B6689CB0055AD01 /* GroundNode.m in Sources */,
-				B6A0207A1B68165A0055AD01 /* UserTableViewController.m in Sources */,
-				B6A0207D1B681B530055AD01 /* GameKitHelper.m in Sources */,
+				B6A020801B698D7E0055AD01 /* ModelCalculations.m in Sources */,
 				B6A020581B669E780055AD01 /* PusheenNode.m in Sources */,
 				B6A020451B669AC20055AD01 /* GamePlayScene.m in Sources */,
 				B618E4DE1B64354D0020AC6C /* main.m in Sources */,
@@ -465,11 +459,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/SoccerChallenge/parse-library-1.7.5",
-					"(2)",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = SoccerChallenge/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -483,11 +473,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/SoccerChallenge/parse-library-1.7.5",
-					"(2)",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = SoccerChallenge/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
