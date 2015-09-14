@@ -17,56 +17,93 @@
 
 @implementation ModelCalculations
 
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        self.time = @(0);
+        self.mass = @(1);
+        self.frictionalCoefficient = @(0.1);
+        self.airResistanceForce = @(80);
+        self.distance = @(0);
+        
+    }
+    return self;
+}
+
 -(double)calculateTime{
     double acceleration;
    ;
-    acceleration = (-[self frictionalForce] - self.airResistanceForce)/self.mass;
-    double time = self.time;
-    time = sqrt((2 * self.distance)/ acceleration);
+    acceleration = (-[self frictionalForce] - [self airResistanceDoubleValue])/[self massDoubleValue];
+    double time = [self.time doubleValue];
+    time = sqrt((2 * [self distanceDoubleValue])/ acceleration);
     
     return time;
 }
 
 -(double)calculateMass{
-    double frictionalAcceleration = self.frictionalCoefficient * gravity;
-    double mass = self.mass;
-    mass = -self.airResistanceForce / ([self acceleration] + frictionalAcceleration);
+    double frictionalAcceleration = [self FrictionalCoefficientDoubleValue] * gravity;
+    double mass = [self.mass doubleValue];
+    mass = -[self.airResistanceForce doubleValue] / ([self acceleration] + frictionalAcceleration);
     
     return mass;
 }
 
 -(double)calculateDistance{
     double acceleration;
-    acceleration = -[self frictionalForce] - self.airResistanceForce;
-    double distance = self.distance;
-    double time = self.time;
-    distance = 0.5 * acceleration * pow(time, 2.0);
+    acceleration = -[self frictionalForce] - [self airResistanceDoubleValue];
+    double distance = [self distanceDoubleValue];
+    distance = 0.5 * acceleration * pow([self timeDoubleValue], 2.0);
     return distance;
     
 }
 -(double)calculateairResistanceForce{
-    double airResistanceForce = self.airResistanceForce;
-    airResistanceForce = (-[self acceleration] * self.mass) - [self frictionalForce];
+    double airResistanceForce = [self airResistanceDoubleValue];
+    airResistanceForce = (-[self acceleration] * [self massDoubleValue]) - [self frictionalForce];
     return airResistanceForce;
     
 }
 
 -(double)calculateCoefficientOfFriction{
-    double coefficientOfFriction = self.frictionalCoefficient;
-    coefficientOfFriction = ((-self.mass * [self acceleration]) - self.airResistanceForce)/ self.mass * gravity;
+    double coefficientOfFriction = [self FrictionalCoefficientDoubleValue];
+    coefficientOfFriction = ((-[self massDoubleValue] * [self acceleration]) - [self airResistanceDoubleValue])/ [self massDoubleValue] * gravity;
     return coefficientOfFriction;
 }
 
 
 
 -(double)frictionalForce{
-    double frictionForce = self.mass * gravity * self.frictionalCoefficient;
+    double frictionForce = [self.mass doubleValue] * gravity * [self.frictionalCoefficient doubleValue];
     return frictionForce;
 }
 
 -(double)acceleration{
     double acceleration;
-    acceleration = (2 * self.distance) / pow(self.time, 2.0);
+    acceleration = (2 * [self.distance doubleValue]) / pow([self.time doubleValue], 2.0);
     return acceleration;
+}
+
+-(double)airResistanceDoubleValue{
+    double airResistance = [self.airResistanceForce doubleValue];
+    return airResistance;
+}
+
+-(double)distanceDoubleValue{
+    double distance = [self.distance doubleValue];
+    return distance;
+}
+
+-(double)massDoubleValue{
+    double mass = [self.mass doubleValue];
+    return mass;
+}
+-(double)FrictionalCoefficientDoubleValue{
+    double coefficientOfFriction = [self.frictionalCoefficient doubleValue];
+    return coefficientOfFriction;
+}
+
+-(double)timeDoubleValue{
+    double time = [self.time doubleValue];
+    return time;
 }
 @end

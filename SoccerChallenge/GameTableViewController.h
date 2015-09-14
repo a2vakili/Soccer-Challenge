@@ -7,8 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ModelCalculations.h"
 
 @interface GameTableViewController : UITableViewController
+
+@property(nonatomic,strong) ModelCalculations *model;
 
 
 

@@ -10,11 +10,22 @@
 
 @interface ModelCalculations : NSObject
 
-@property(nonatomic) double time;
-@property(nonatomic) double airResistanceForce;
-@property(nonatomic) double frictionalCoefficient;
-@property(nonatomic) double distance;
-@property(nonatomic) double mass;
+
+@property(nonatomic,strong) NSNumber *time;
+
+
+@property(nonatomic,strong) NSNumber *airResistanceForce;
+@property(nonatomic,strong) NSNumber *frictionalCoefficient;
+@property(nonatomic,strong) NSNumber *distance;
+@property(nonatomic,strong) NSNumber *mass;
+
+-(double)calculateTime;
+-(double)calculateMass;
+-(double)calculateDistance;
+-(double)calculateairResistanceForce;
+-(double)calculateCoefficientOfFriction;
+
+
 
 
 @end

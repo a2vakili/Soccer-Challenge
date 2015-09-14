@@ -9,6 +9,7 @@
 #import "GameTableViewController.h"
 #import "GamePlayScene.h"
 #import "SoccerTypes.h"
+#import "SolveChallengeViewController.h"
 
 @interface GameTableViewController ()
 @property (weak, nonatomic) IBOutlet SKView *gamePlayScene;
@@ -18,6 +19,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *timeDisplaylabel;
 @property (weak, nonatomic) IBOutlet UISlider *timeSlider;
 @property (weak, nonatomic) IBOutlet UILabel *distanceLabel;
+@property(nonatomic) BOOL hidden;
 
 @end
 
@@ -73,6 +75,15 @@
     // Return the number of rows in the section.
     return 6;
 }
+
+- (IBAction)startChallenge:(id)sender {
+    
+    SolveChallengeViewController *challenge = [[SolveChallengeViewController alloc]init];
+    //challenge.varible1.text =
+}
+
+
+
 
 - (IBAction)surfaceSegmentedControl:(id)sender {
     
@@ -131,19 +142,28 @@
    
 }
 
-
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (self.model.distance == nil && indexPath.row == 1) {
+        return 0;
+    }
+    if (self.model.frictionalCoefficient == nil && indexPath.row == 2){
+        return 0;
+    }
+    if (self.model.mass == nil && indexPath.row == 3){
+        return 0;
+    }
+    if (self.model.time == nil && indexPath.row == 4){
+        return 0;
+    }
+    if (self.model.airResistanceForce == nil && indexPath.row ==5){
+        return 0;
+    }
+    return [super tableView:tableView heightForRowAtIndexPath:indexPath];
+    
 }
-*/
+
+
+
 
 /*
 // Override to support rearranging the table view.

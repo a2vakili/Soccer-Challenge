@@ -14,6 +14,7 @@
 		B618E4EE1B64354D0020AC6C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B618E4ED1B64354D0020AC6C /* Images.xcassets */; };
 		B618E4F11B64354D0020AC6C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B618E4EF1B64354D0020AC6C /* LaunchScreen.xib */; };
 		B618E4FD1B64354D0020AC6C /* SoccerChallengeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B618E4FC1B64354D0020AC6C /* SoccerChallengeTests.m */; };
+		B64C91671B6C188700AD96BC /* SolveChallengeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B64C91661B6C188700AD96BC /* SolveChallengeViewController.m */; };
 		B6A020251B667D190055AD01 /* GameTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6A020241B667D190055AD01 /* GameTableViewController.m */; };
 		B6A0203A1B667EF00055AD01 /* basketball.png in Resources */ = {isa = PBXBuildFile; fileRef = B6A020341B667EF00055AD01 /* basketball.png */; };
 		B6A0203B1B667EF00055AD01 /* bowlingball.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = B6A020351B667EF00055AD01 /* bowlingball.jpeg */; };
@@ -32,6 +33,8 @@
 		B6A020771B6810FA0055AD01 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6A020761B6810FA0055AD01 /* GameKit.framework */; };
 		B6A020801B698D7E0055AD01 /* ModelCalculations.m in Sources */ = {isa = PBXBuildFile; fileRef = B6A0207F1B698D7E0055AD01 /* ModelCalculations.m */; };
 		B6A020831B6A8E340055AD01 /* GCTurnBasedMatchHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = B6A020821B6A8E340055AD01 /* GCTurnBasedMatchHelper.m */; };
+		B6A020861B6AAFDE0055AD01 /* UserPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6A020851B6AAFDE0055AD01 /* UserPageViewController.m */; };
+		B6A020891B6AD5B80055AD01 /* ChoosingVaribleTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6A020881B6AD5B80055AD01 /* ChoosingVaribleTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +60,8 @@
 		B618E4F61B64354D0020AC6C /* SoccerChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SoccerChallengeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B618E4FB1B64354D0020AC6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B618E4FC1B64354D0020AC6C /* SoccerChallengeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SoccerChallengeTests.m; sourceTree = "<group>"; };
+		B64C91651B6C188700AD96BC /* SolveChallengeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SolveChallengeViewController.h; sourceTree = "<group>"; };
+		B64C91661B6C188700AD96BC /* SolveChallengeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SolveChallengeViewController.m; sourceTree = "<group>"; };
 		B6A020231B667D190055AD01 /* GameTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameTableViewController.h; sourceTree = "<group>"; };
 		B6A020241B667D190055AD01 /* GameTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameTableViewController.m; sourceTree = "<group>"; };
 		B6A020341B667EF00055AD01 /* basketball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = basketball.png; sourceTree = "<group>"; };
@@ -84,6 +89,10 @@
 		B6A0207F1B698D7E0055AD01 /* ModelCalculations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModelCalculations.m; sourceTree = "<group>"; };
 		B6A020811B6A8E340055AD01 /* GCTurnBasedMatchHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCTurnBasedMatchHelper.h; sourceTree = "<group>"; };
 		B6A020821B6A8E340055AD01 /* GCTurnBasedMatchHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCTurnBasedMatchHelper.m; sourceTree = "<group>"; };
+		B6A020841B6AAFDE0055AD01 /* UserPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserPageViewController.h; sourceTree = "<group>"; };
+		B6A020851B6AAFDE0055AD01 /* UserPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserPageViewController.m; sourceTree = "<group>"; };
+		B6A020871B6AD5B80055AD01 /* ChoosingVaribleTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChoosingVaribleTableViewController.h; sourceTree = "<group>"; };
+		B6A020881B6AD5B80055AD01 /* ChoosingVaribleTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChoosingVaribleTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +139,12 @@
 				B6A020551B669D280055AD01 /* SpriteKit */,
 				B618E4DF1B64354D0020AC6C /* AppDelegate.h */,
 				B618E4E01B64354D0020AC6C /* AppDelegate.m */,
+				B6A020841B6AAFDE0055AD01 /* UserPageViewController.h */,
+				B6A020851B6AAFDE0055AD01 /* UserPageViewController.m */,
+				B64C91651B6C188700AD96BC /* SolveChallengeViewController.h */,
+				B64C91661B6C188700AD96BC /* SolveChallengeViewController.m */,
+				B6A020871B6AD5B80055AD01 /* ChoosingVaribleTableViewController.h */,
+				B6A020881B6AD5B80055AD01 /* ChoosingVaribleTableViewController.m */,
 				B6A0207E1B698D7E0055AD01 /* ModelCalculations.h */,
 				B6A0207F1B698D7E0055AD01 /* ModelCalculations.m */,
 				B6A020811B6A8E340055AD01 /* GCTurnBasedMatchHelper.h */,
@@ -326,7 +341,10 @@
 				B6A0205B1B66A0440055AD01 /* BallNode.m in Sources */,
 				B6A020601B66A6B70055AD01 /* WindNode.m in Sources */,
 				B618E4E11B64354D0020AC6C /* AppDelegate.m in Sources */,
+				B6A020861B6AAFDE0055AD01 /* UserPageViewController.m in Sources */,
+				B6A020891B6AD5B80055AD01 /* ChoosingVaribleTableViewController.m in Sources */,
 				B6A020251B667D190055AD01 /* GameTableViewController.m in Sources */,
+				B64C91671B6C188700AD96BC /* SolveChallengeViewController.m in Sources */,
 				B6A020421B6689CB0055AD01 /* GroundNode.m in Sources */,
 				B6A020801B698D7E0055AD01 /* ModelCalculations.m in Sources */,
 				B6A020581B669E780055AD01 /* PusheenNode.m in Sources */,

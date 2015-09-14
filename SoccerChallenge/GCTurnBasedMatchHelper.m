@@ -11,6 +11,7 @@
 @implementation GCTurnBasedMatchHelper
 
 @synthesize gameCenterAvailable;
+@synthesize currentMatch;
 
 
 #pragma mark Initialization
@@ -74,7 +75,9 @@ static GCTurnBasedMatchHelper *sharedHelper = nil;
     NSLog(@"Authenticating local user...");
     if ([GKLocalPlayer localPlayer].authenticated == NO) {
         [[GKLocalPlayer localPlayer]
-         setAuthenticateHandler:nil];
+         setAuthenticateHandler:^(UIViewController *viewCont, NSError *err) {
+             NSLog(@"works");
+         }];
     } else {
         NSLog(@"Already authenticated!");
     }
@@ -126,6 +129,15 @@ static GCTurnBasedMatchHelper *sharedHelper = nil;
                       playerQuitForMatch:(GKTurnBasedMatch *)match {
     NSLog(@"playerquitforMatch, %@, %@",
           match, match.currentParticipant);
+    self.currentMatch = match;
+    GKTurnBasedParticipant *firstParticipant =
+    [match.participants objectAtIndex:0];
+    if (firstParticipant.lastTurnDate) {
+        [delegate takeTurn:match];
+    } else {
+        [delegate enterNewGame:match];
+    }
+    
 }
 
 
